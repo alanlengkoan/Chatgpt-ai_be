@@ -214,6 +214,28 @@ app.post('/send/group', async (req, res) => {
 // untuk detect intent
 app.post('/dialogflow/detect', (req, res) => {
   try {
+    // async function runCompletion() {
+    //   try {
+    //     const completion = await openai.createCompletion({
+    //       model: "gpt-3.5-turbo",
+    //       messages: [{
+    //         role: "user",
+    //         content: "Hello, I'm a chatbot"
+    //       }]
+    //     });
+    //     console.log(completion.data.choices[0].message);
+    //   } catch (error) {
+    //     if (error.response) {
+    //       console.log(error.response.status);
+    //       console.log(error.response.data);
+    //     } else {
+    //       console.log(error.message);
+    //     }
+    //   }
+    // }
+
+    // runCompletion();
+
     const data = req.body;
 
     const credentials = JSON.parse(process.env.DIALOGFLOW_CREDENTIALS);
